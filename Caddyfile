@@ -1,7 +1,5 @@
 wg.tequerist.com {
     reverse_proxy localhost:51821 { 
-        header_up X-Forwarded-Proto https
-        header_up X-Url-Scheme {scheme}
         header_up X-Real-IP {remote}
     }
     encode gzip zstd
